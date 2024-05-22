@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import './css/Vendedor.css'
+import ListaVendedor from '../components/ListaVendedor'
 
 const Vendedor = () => {
 
@@ -55,8 +56,15 @@ const Vendedor = () => {
                 </div>
                 <button type='submit'>Cadastrar</button>
             </form>
+            <div className='content-list-vendedor'>
+                {lista.map((val) => (
+                    <ListaVendedor lista={val.lista} setLista={val.setLista} key={val.id} id={val.id} nome={val.nome} sobrenome={val.sobrenome} data_contratacao={val.data_contratacao}/>
+                ))}
+            </div>
         </div>
     )
 }
 
 export default Vendedor
+
+// meio 1, 1 e 3
