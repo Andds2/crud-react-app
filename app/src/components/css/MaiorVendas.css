@@ -1,0 +1,51 @@
+.mrvenda-container{
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+    gap: 20px;
+}
+
+.mrvenda-container > h2{
+    color: #4A4E69;
+}
+
+.mrvenda-container > table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mrvenda-container > table > tr{
+    border-bottom: 1px solid #4A4E69;
+    user-select: none;
+}
+
+.mrvenda-container > table > tr:hover{
+    background-color: #4A4E69;
+}
+
+.mrvenda-container > table > tr:hover > th{
+    color: #fafafa;
+    border-right: 1px solid #fafafa;
+}
+
+.mrvenda-container > table > tr:hover > td{
+    color: #fafafa;
+}
+
+.mrvenda-container > table > tr > th{
+    text-align: left;
+    font-size: 18px;
+    color: #4A4E69;
+    border-right: 1px solid #4A4E69;
+    padding: 5px;
+}
+
+.mrvenda-container > table > tr > td{
+    font-size: 18px;
+    padding: 5px;
+}
