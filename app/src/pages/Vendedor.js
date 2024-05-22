@@ -39,10 +39,20 @@ const Vendedor = () => {
 
     return(
         <div className='form-cad-vendedor'>
-            <form onSubmit={handleInsert}>
-                <input type="text" name='nome' placeholder='nome' onChange={handleAltValor}/>
-                <input type="text" name='sobrenome' placeholder='nome' onChange={handleAltValor}/>
-                <input type="date" name='data_contratacao' onChange={handleAltValor}/>
+            <h1>Cadastro de Vendedores</h1>
+            <form onSubmit={handleInsert} className='form-cad'>
+                <div className='form-input'>
+                    <label for='name'>Nome</label>
+                    <input type="text" name='nome' placeholder='digite aqui...' onChange={handleAltValor}/>
+                </div>
+                <div className='form-input'>
+                    <label for='sobrenome'>Sobrenome</label>
+                    <input type="text" name='sobrenome' placeholder='digite aqui...' onChange={handleAltValor}/>
+                </div>
+                <div className='form-input'>
+                    <label for='data_contratacao'>Data de Contratação</label>
+                    <input type="date" name='data_contratacao' onChange={handleAltValor}/>
+                </div>
                 <button type='submit'>Cadastrar</button>
             </form>
         </div>

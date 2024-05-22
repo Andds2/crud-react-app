@@ -5,7 +5,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import QntVendas from '../components/QntVendas';
-import MaiorVenda from '../components/MaiorVenda';
+import MaiorVendas from '../components/MaiorVendas';
 
 const Home = () => {
 
@@ -54,7 +54,7 @@ const Home = () => {
                 <div className='home-content-list'>
                     <div className='home-list-card'>
                         {listMaiorVendas.map((val) => ( 
-                            <MaiorVenda listMaiorVendas={listMaiorVendas} setListMaiorVendas={setListMaiorVendas} key={val.id} id={val.id} nome={val.nome} produto={val.produto} valor={val.valor}/>
+                            <MaiorVendas listMaiorVendas={listMaiorVendas} setListMaiorVendas={setListMaiorVendas} key={val.id} id={val.id} nome={val.nome} produto={val.produto} valor={val.valor}/>
                         ))}
                     </div>
 

@@ -4,8 +4,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Vendas from './pages/Vendas';
 import Vendedor from './pages/Vendedor';
-import VendasList from './pages/list/VendasList';
-import VendedorList from './pages/list/VendedorList';
+import VendasList from './pages/lists/VendasList';
+import VendedorList from './pages/lists/VendedorList';
 
 
 

@@ -1,4 +1,4 @@
-import './css/MaiorVenda.css'
+import './css/MaiorVendas.css'
 import { FaMoneyBillWave } from "react-icons/fa";
 
 const MaiorVenda = (props) => {

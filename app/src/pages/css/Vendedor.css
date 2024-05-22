@@ -1,4 +1,78 @@
 .form-cad-vendedor{
     width: 100%;
-    background-color: aqua;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.form-cad-vendedor > h1{
+    margin-top: 40px;
+    color: #4A4E69;
+}
+
+.form-cad{
+    margin-top: 40px;
+    width: 60%;
+    height: auto;
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-input > label {
+    margin-left: 10px;
+}
+
+.form-input > input[type=text]{
+    border: 2px solid #4A4E69;
+    outline: none;
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #4A4E69;
+    font-weight: 500;
+}
+
+.form-input > input[type=date]{
+    border: 2px solid #4A4E69;
+    outline: none;
+    width: 250px;
+    padding: 9px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #4A4E69;
+    font-weight: 500;
+}
+
+.form-cad > button{
+    background-color: #4A4E69;
+    border: 2px solid #4A4E69;
+    color: #fafafa;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.form-cad > button:hover{
+    transition: all .2s;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px #bbb;
 }
