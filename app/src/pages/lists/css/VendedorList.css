@@ -1,0 +1,56 @@
+.list-vendedor-container{
+    width: 100%;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.list-vendedor-container > h1{
+    margin-top: 20px;
+    color: #4A4E69;
+}
+
+.list-vendedor-tabela{
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.list-vendedor-tabela > table{
+    width: 700px;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 3px #4A4E69;
+}
+
+.list-vendedor-tabela > table > thead{
+    background-color: #4A4E69;
+    color: #fafafa;
+}
+
+.list-vendedor-tabela > table > thead > tr > th{
+    text-align: center;
+    height: 50px;
+}
+
+.list-vendedor-tabela > table > tbody > tr > td{
+    padding: 15px;
+    border-top: 1px solid #4A4E69;
+    color: #4A4E69;
+}
+
+.col-id{
+    width: 5%;
+}
+
+.col-nome{
+    width: 35%;
+}
+
+.col-sobrenome{
+    width: 30%;
+}
+
+.col-data{
+    width: 30%;
+}
