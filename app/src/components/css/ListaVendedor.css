@@ -1,7 +1,7 @@
 .vendedor-card{
     box-shadow: 0px 0px 5px #4A4E69;
     text-wrap: wrap;
-    width: 400px;
+    width: 300px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -17,10 +17,12 @@
 .vendedor-card > h2{
     margin-top: 20px;
     color: #4A4E69;
+    font-size: 20px;
 }
 
 .vendedor-card > p{
     margin-top: 5px;
+    font-size: 14px;
 }
 
 .vendedor-card-button{
@@ -43,14 +45,30 @@
 }
 
 .card-btn-edit{
-    border: 2px solid #4A4E69;
-    color: #4A4E69;
+    border: 2px solid #6b705c;
+    color: #6b705c;
     background-color: transparent;
 
 }
 
+.card-btn-edit:hover{
+    transition: all .2s;
+    background-color: #6b705c;
+    color: #fafafa;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px #bbb;
+}
+
 .card-btn-delet{
-    border: 2px solid #4A4E69;
-    color: #4A4E69;
+    border: 2px solid #6f2038;
+    color: #6f2038;
     background-color: transparent;
+}
+
+.card-btn-delet:hover{
+    transition: all .2s;
+    background-color: #6f2038;
+    color: #fafafa;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px #bbb;
 }

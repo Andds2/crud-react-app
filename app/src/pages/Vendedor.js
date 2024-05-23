@@ -13,7 +13,7 @@ const Vendedor = () => {
     const [lista, setLista] = useState([])
 
     const handleInsert = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
         try{
             const requisicao = await Axios.post('http://localhost:3001/cadvendedor', valor)
 

@@ -86,6 +86,26 @@ app.post('/cadvendedor', (req, res) => {
 /* Fim de Rotas de Cadastros */
 
 
+/* Inicio de Rotas de Deletes */
+
+// Delete vendedor
+app.delete('/deletevendedor/:id', (req, res) => {
+    const {id} = req.params
+
+    const Query = 'DELETE FROM vendedor WHERE id = ?'
+
+    database.query(Query, [id], (err) => {
+        if(err){
+            console.log(err)
+            return res.status(500).send('Ocorreu um erro com o servidor, Vendedor não deletado!')
+        }
+        return res.status(200).send('Vendedor deletado com sucesso!')
+    })
+})
+
+/* Fim de Rotas de Deletes */
+ 
+
 
 
 
