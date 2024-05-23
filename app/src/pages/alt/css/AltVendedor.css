@@ -9,6 +9,7 @@
 
 .main-form-container > h1{
     margin-top: 80px;
+    color: #4A4E69;
 }
 
 .form-container-alt-vendedor{
@@ -44,6 +45,10 @@
     border-radius: 20px;
 }
 
+.form-alt-vendedor-input > label{
+    margin-left: 10px;
+}
+
 .form-container-alt-vendedor > form > button{
     width: 160px;
     padding: 8px;
@@ -75,4 +80,9 @@
 
 .form-card-alt-vendedor > h3{
     text-align: center;
+    color: #4A4E69;
+}
+
+.form-card-alt-vendedor > p > b{
+    color: #4A4E69;
 }
