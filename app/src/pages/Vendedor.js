@@ -8,7 +8,7 @@ const Vendedor = () => {
     const [valor, setValor] = useState({
         nome: '',
         sobrenome: '',
-        data_contratacao: ''
+        email: ''
     })
     const [lista, setLista] = useState([])
 
@@ -43,22 +43,22 @@ const Vendedor = () => {
             <h1>Cadastro de Vendedores</h1>
             <form onSubmit={handleInsert} className='form-cad'>
                 <div className='form-input'>
-                    <label for='name'>Nome</label>
-                    <input type="text" name='nome' placeholder='digite aqui...' onChange={handleAltValor}/>
+                    <label htmlFor='nome'>Nome</label>
+                    <input type="text" name='nome' id='nome' placeholder='digite aqui...' onChange={handleAltValor}/>
                 </div>
                 <div className='form-input'>
-                    <label for='sobrenome'>Sobrenome</label>
-                    <input type="text" name='sobrenome' placeholder='digite aqui...' onChange={handleAltValor}/>
+                    <label htmlFor='sobrenome'>Sobrenome</label>
+                    <input type="text" name='sobrenome' id='sobrenome' placeholder='digite aqui...' onChange={handleAltValor}/>
                 </div>
                 <div className='form-input'>
-                    <label for='data_contratacao'>Data de Contratação</label>
-                    <input type="date" name='data_contratacao' onChange={handleAltValor}/>
+                    <label htmlFor='email'>Email</label>
+                    <input type="text" name='email' id='email' placeholder='digite aqui...' onChange={handleAltValor}/>
                 </div>
                 <button type='submit'>Cadastrar</button>
             </form>
             <div className='content-list-vendedor'>
                 {lista.map((val) => (
-                    <ListaVendedor lista={val.lista} setLista={val.setLista} key={val.id} id={val.id} nome={val.nome} sobrenome={val.sobrenome} data_contratacao={val.data_contratacao}/>
+                    <ListaVendedor lista={val.lista} setLista={val.setLista} key={val.id} id={val.id} nome={val.nome} sobrenome={val.sobrenome} email={val.email}/>
                 ))}
             </div>
         </div>

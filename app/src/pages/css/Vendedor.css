@@ -1,6 +1,6 @@
 .form-cad-vendedor{
     width: 100%;
-    height: 120vh;
+    min-height: 92vh;
     display: flex;
     flex-direction: column;
     align-items: center;

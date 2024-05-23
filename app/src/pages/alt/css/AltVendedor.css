@@ -1,0 +1,78 @@
+.main-form-container{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.main-form-container > h1{
+    margin-top: 80px;
+}
+
+.form-container-alt-vendedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 40px;
+}
+
+.form-container-alt-vendedor > form{
+    width: 40%;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 20px;
+}
+
+.form-alt-vendedor-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-alt-vendedor-input > input{
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #4A4E69;
+    border-radius: 20px;
+}
+
+.form-container-alt-vendedor > form > button{
+    width: 160px;
+    padding: 8px;
+    height: 40px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #4A4E69;
+    border: 2px solid #4A4E69;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.form-container-alt-vendedor > form > button:hover{
+    transition: all .2s;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px #bbb;
+}
+
+.form-card-alt-vendedor{
+    width: 40%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 20px;
+}
+
+.form-card-alt-vendedor > h3{
+    text-align: center;
+}

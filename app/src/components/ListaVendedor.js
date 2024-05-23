@@ -3,6 +3,7 @@ import { FaUserLargeSlash } from "react-icons/fa6";
 import { FaUserEdit } from "react-icons/fa";
 import './css/ListaVendedor.css'
 import Axios from 'axios';
+import { Link } from "react-router-dom";
 
 const ListaVendedor = (props) => {
 
@@ -20,12 +21,12 @@ const ListaVendedor = (props) => {
     }
 
     return(
-        <div className="vendedor-card">
+        <div className="vendedor-card" key={props.id}>
             <h1><IoPersonCircleOutline /></h1>
             <h2>{props.nome} {props.sobrenome}</h2>
-            <p>Contratado em: {props.data_contratacao}</p>
+            <p>E-mail: {props.email}</p>
             <div className="vendedor-card-button">
-                <button className="card-btn-edit"><FaUserEdit /></button>
+                <Link to={`/altvendedor/${props.id}`}> <button className="card-btn-edit"><FaUserEdit /></button> </Link>
                 <button className="card-btn-delet" onClick={handleDelete}><FaUserLargeSlash /></button>
             </div>
         </div>

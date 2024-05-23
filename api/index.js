@@ -18,7 +18,7 @@ const database = mysql.createPool({
 
 // Lista vendedores
 app.get('/listvendedor', (req, res) => {
-    const Query = 'SELECT id, nome, sobrenome, DATE_FORMAT(data_contratacao, "%d/%m/%Y") AS data_contratacao FROM vendedor'
+    const Query = 'SELECT * FROM vendedor'
 
     database.query(Query, (err, result) => {
         if(err) console.log(err)
@@ -58,6 +58,19 @@ app.get('/listmaiorvenda', (req, res) => {
     })
 })
 
+// Lista vendedor update
+app.get('/listvendedor/:id', (req, res) => {
+    const {id} = req.params
+
+    const Query = 'SELECT * FROM vendedor WHERE id = ?'
+
+    database.query(Query, [id], (err, result) => {
+        if(err) console.log(err)
+        else res.send(result)
+    })
+
+})
+
 /* Fim de Rotas de Listagens */
 
 
@@ -66,15 +79,15 @@ app.get('/listmaiorvenda', (req, res) => {
 
 // Cadastro de Vendedor
 app.post('/cadvendedor', (req, res) => {
-    const {nome, sobrenome, data_contratacao} = req.body
+    const {nome, sobrenome, email} = req.body
 
-    if(!nome || !sobrenome || !data_contratacao){
+    if(!nome || !sobrenome || !email){
         return res.status(400).send('É necessario preencher todos os campos!')
     }
 
-    const Query = 'INSERT INTO vendedor (nome, sobrenome, data_contratacao) VALUES (?,?,?)'
+    const Query = 'INSERT INTO vendedor (nome, sobrenome, email) VALUES (?,?,?)'
 
-    database.query(Query, [nome, sobrenome, data_contratacao], (err) => {
+    database.query(Query, [nome, sobrenome, email], (err) => {
         if(err){
             console.log(err)
             return res.status(500).send('Ocorreu um erro com o servidor, Vendedor não cadastrado!')
@@ -84,6 +97,7 @@ app.post('/cadvendedor', (req, res) => {
 })
 
 /* Fim de Rotas de Cadastros */
+
 
 
 /* Inicio de Rotas de Deletes */
@@ -104,10 +118,26 @@ app.delete('/deletevendedor/:id', (req, res) => {
 })
 
 /* Fim de Rotas de Deletes */
- 
 
 
 
+/* Inicio Rotas de Update */
+app.put('/altvendedor/:id', (req, res) => {
+    const {id} = req.params
+    const {nome, sobrenome, email} = req.body
+
+    const Query = 'UPDATE vendedor SET nome = ?, sobrenome = ?, email = ? WHERE id = ?'
+
+    database.query(Query, [nome, sobrenome, email, id], (err) => {
+        if(err){
+            console.log(err)
+            return res.status(500).send('Ocorreu um erro com o servidor, vendedor não alterado!')
+        }
+        return res.status(200).send('Vendedor alterado com sucesso!')
+    })
+})
+
+/* Fim rotas de Listagem (2,7,22,24.5,26)*/
 
 app.listen(3001, () => {
     console.log("Rodando!")

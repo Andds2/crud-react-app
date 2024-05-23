@@ -6,10 +6,11 @@ import Vendas from './pages/Vendas';
 import Vendedor from './pages/Vendedor';
 import VendasList from './pages/lists/VendasList';
 import VendedorList from './pages/lists/VendedorList';
+import AltVendedor from './pages/alt/AltVendedor';
 
 
 
-function App() {
+function App(props) {
   return (
     <div className="app-container">
       <Router>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/vendas' element={<Vendas />} />
           <Route path='/listavendas' element={<VendasList />} />
           <Route path='/listavendedores' element={<VendedorList />} />
+          <Route path='/altvendedor/:id' element={<AltVendedor />}/>
         </Routes>
       </Router>
     </div>
