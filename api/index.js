@@ -28,7 +28,7 @@ app.get('/listvendedor', (req, res) => {
 
 // Lista vendas
 app.get('/listvendas', (req, res) => {
-    const Query = 'SELECT vendas.id, vendas.produto, vendas.valor, DATE_FORMAT(vendas.data_venda, "%d/%m/%y") as data_venda, CONCAT(vendedor.nome, " ", vendedor.sobrenome) as nome FROM vendas JOIN vendedor ON vendedor.id = vendas.id_vendedor'
+    const Query = 'SELECT vendas.id, vendas.produto, vendas.valor, DATE_FORMAT(vendas.data_venda, "%d/%m/%y") as data_venda, CONCAT(vendedor.nome, " ", vendedor.sobrenome) as nome FROM vendas JOIN vendedor ON vendedor.id = vendas.id_vendedor ORDER BY data_venda DESC'
 
     database.query(Query, (err, result) => {
         if(err) console.log(err)

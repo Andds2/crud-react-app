@@ -2,6 +2,8 @@ import Axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import './css/Vendedor.css'
 import ListaVendedor from '../components/ListaVendedor'
+import { IoPersonCircleOutline } from "react-icons/io5";
+
 
 const Vendedor = () => {
 
@@ -40,19 +42,19 @@ const Vendedor = () => {
 
     return(
         <div className='form-cad-vendedor'>
-            <h1>Cadastro de Vendedores</h1>
+            <h1><IoPersonCircleOutline /> Cadastro de Vendedores</h1>
             <form onSubmit={handleInsert} className='form-cad'>
                 <div className='form-input'>
                     <label htmlFor='nome'>Nome</label>
-                    <input type="text" name='nome' id='nome' placeholder='digite aqui...' onChange={handleAltValor}/>
+                    <input type="text" name='nome' id='nome' placeholder='digite aqui...' onChange={handleAltValor} required/>
                 </div>
                 <div className='form-input'>
                     <label htmlFor='sobrenome'>Sobrenome</label>
-                    <input type="text" name='sobrenome' id='sobrenome' placeholder='digite aqui...' onChange={handleAltValor}/>
+                    <input type="text" name='sobrenome' id='sobrenome' placeholder='digite aqui...' onChange={handleAltValor} required/>
                 </div>
                 <div className='form-input'>
                     <label htmlFor='email'>Email</label>
-                    <input type="text" name='email' id='email' placeholder='digite aqui...' onChange={handleAltValor}/>
+                    <input type="text" name='email' id='email' placeholder='digite aqui...' onChange={handleAltValor} required/>
                 </div>
                 <button type='submit'>Cadastrar</button>
             </form>
