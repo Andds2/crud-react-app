@@ -24,8 +24,8 @@ const Vendas = () => {
     return(
         <div className="vendas-container">
             <div className="vendas-container-cadastro">
-                <h1>Cadastro de Vendas</h1>
                 <form>
+                    <h1>Cadastro de Vendas</h1>
                     <div className='form-cad-venda'>
                         <label className='form-cad-venda-label'>Produto</label>
                         <input type="text" className='form-cad-venda-input'/>
@@ -40,14 +40,14 @@ const Vendas = () => {
                     </div>
                     <div className='form-cad-venda'>
                         <label className='form-cad-venda-label'>Vendedor</label>
-                        <select>
+                        <select className='form-cad-venda-select'>
                             <option value="">Selecione uma opção</option>
                             {listaVendedor.map((val) => (
                                 <option value={val.id} key={val.id}>{val.nome} {val.sobrenome}</option>
                             ))}
                         </select>
                     </div>
-                    <button><TbShoppingCartCheck /></button>
+                    <button className='form-cad-venda-btn'><TbShoppingCartCheck /></button>
                 </form>
             </div>
             <div className="vendas-container-lista">

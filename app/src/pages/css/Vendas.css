@@ -13,7 +13,80 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    background-color: aquamarine;
+}
+
+.vendas-container-cadastro > form{
+    box-shadow: 0px 0px 5px #4A4E69;
+    margin-top: 100px;
+    width: 55%;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vendas-container-cadastro > form > h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4A4E69;
+}
+
+.form-cad-venda{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form-cad-venda-input{
+    width: 250px;
+    height: 10px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #4A4E69;
+    border-radius: 20px;
+}
+
+.form-cad-venda-select{
+    border: 2px solid #4A4E69;
+    width: 270px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.form-cad-venda-select > option{
+    background-color: #4A4E69;
+    color: #fafafa;
+    font-weight: 500;
+}
+
+.form-cad-venda-label{
+    font-weight: 500;
+    color: #4A4E69;
+    margin-left: 5px;
+}
+
+.form-cad-venda-btn{
+    margin-top: 40px;
+    width: 100px;
+    height: 40px;
+    background-color: #4A4E69;
+    border: none;
+    color: #fafafa;
+    font-size: 18px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-cad-venda-btn:hover{
+    transition: all .2s;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px #bbb;
 }
 
 .vendas-container-lista{
@@ -27,6 +100,6 @@
     overflow-y: scroll;
 }
 
-.vendas-container-cadastro > h1, .vendas-container-lista > h1{
+.vendas-container-lista > h1{
     margin-top: 20px;
 }
