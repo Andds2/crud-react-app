@@ -96,10 +96,67 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    background-color: aqua;
     overflow-y: scroll;
 }
 
 .vendas-container-lista > h1{
     margin-top: 20px;
+    color: #4A4E69;
+}
+
+.vendas-container-lista-table{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 20px;
+    width: 90%;
+    padding-inline: 10px;
+    align-items: center;
+}
+
+.venda-table-head{
+    display: flex;
+    flex-direction: row;
+    background-color: #4A4E69;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    padding: 10px;
+    color: #fafafa;
+    font-size: 14px;
+}
+
+.venda-table-head-col-id{
+    width: 5%;
+    text-align: center;
+}
+
+.venda-table-head-col-produto{
+    width: 25%;
+    text-align: center;
+}
+
+.venda-table-head-col-valor{
+    width: 10%;
+    text-align: center;
+}
+
+.venda-table-head-col-data{
+    width: 20%;
+    text-align: center;
+}
+
+.venda-table-head-col-vendedor{
+    width: 20%;
+    text-align: center;
+}
+
+.venda-table-head-col-edit{
+    width: 10%;
+    text-align: center;
+}
+
+.venda-table-head-col-delet{
+    width: 10%;
+    text-align: center;
 }

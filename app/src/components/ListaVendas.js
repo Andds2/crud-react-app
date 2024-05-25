@@ -1,16 +1,19 @@
+import './css/ListaVendas.css'
+import { FaEdit } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa"
+
 const ListaVendas = (props) => {
+
     return(
-        <tbody>
-            <tr>
-                <td>{props.id}</td>
-                <td>{props.produto}</td>
-                <td>{props.valor}</td>
-                <td>{props.data_venda}</td>
-                <td>{props.nome}</td>
-                <td><button>Edit</button></td>
-                <td><button>Excluir</button></td>
-            </tr>
-        </tbody>
+        <div className='venda-table-body'>
+            <div className='venda-table-body-col-id'>{props.id}</div>
+            <div className='venda-table-body-col-produto'>{props.produto}</div>
+            <div className='venda-table-body-col-valor'>{props.valor.toFixed(2)}</div>
+            <div className='venda-table-body-col-data'>{props.data_venda}</div>
+            <div className='venda-table-body-col-vendedor'>{props.nome}</div>
+            <div className='venda-table-body-col-edit'><button><FaEdit /></button></div>
+            <div className='venda-table-body-col-delet'><button><FaTrash /></button></div>
+        </div>
     )
 }
 

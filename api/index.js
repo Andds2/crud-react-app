@@ -96,6 +96,25 @@ app.post('/cadvendedor', (req, res) => {
     })
 })
 
+// Cadastro de Vendas
+app.post('/cadvendas', (req, res) => {
+    const {produto, valor, data_venda, id_vendedor} = req.body
+
+    if(!produto || !valor || !data_venda || !id_vendedor){
+        return res.status(400).send('É necessario preencher todos os campos!')
+    }
+
+    const Query = 'INSERT INTO vendas (produto, valor, data_venda, id_vendedor) VALUES (?,?,?,?)'
+
+    database.query(Query, [produto, valor, data_venda, id_vendedor], (err) => {
+        if(err){
+            console.log(err)
+            return res.status(500).send('Ocorreu um erro com o servidor, Venda não cadastrada!')
+        }
+        return res.status(200).send('Venda cadastrada com sucesso!')
+    })
+})
+
 /* Fim de Rotas de Cadastros */
 
 
