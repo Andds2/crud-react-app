@@ -22,7 +22,7 @@ const VendedorList = () => {
                             <th className="col-id">ID</th>
                             <th className="col-nome">Nome</th>
                             <th className="col-sobrenome">Sobrenome</th>
-                            <th className="col-data">Data da contratação</th>
+                            <th className="col-data">Email</th>
                         </tr>
                     </thead>
                     {listVendedor.map((val) => (
@@ -31,7 +31,7 @@ const VendedorList = () => {
                                 <td>{val.id}</td>
                                 <td>{val.nome}</td>
                                 <td>{val.sobrenome}</td>
-                                <td>{val.data_contratacao}</td>
+                                <td>{val.email}</td>
                             </tr>
                         </tbody>
                     ))}

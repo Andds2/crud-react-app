@@ -60,7 +60,7 @@ const Vendas = () => {
                     </div>
                     <div className='form-cad-venda'>
                         <label className='form-cad-venda-label'>Valor</label>
-                        <input type="number" className='form-cad-venda-input' placeholder='digite aqui...' name='valor' id='valor' required onChange={handleAltValor}/>
+                        <input type="number" className='form-cad-venda-input' placeholder='digite aqui...' name='valor' id='valor' step='0.01' required onChange={handleAltValor}/>
                     </div>
                     <div className='form-cad-venda'>
                         <label className='form-cad-venda-label'>Data da venda</label>
