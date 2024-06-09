@@ -1,0 +1,98 @@
+.main-form-container{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.main-form-container > h1{
+    margin-top: 80px;
+    color: #4A4E69;
+}
+
+.form-container-alt-venda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 40px;
+}
+
+.form-container-alt-venda > form{
+    width: 40%;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 20px;
+}
+
+.form-alt-venda-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-alt-venda-input > input{
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #4A4E69;
+    border-radius: 20px;
+}
+
+.form-alt-venda-input > input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.form-alt-venda-input > select{
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+}
+
+.form-alt-venda-input > label{
+    margin-left: 10px;
+}
+
+.form-container-alt-venda > form > button{
+    width: 160px;
+    padding: 8px;
+    height: 40px;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #4A4E69;
+    border: 2px solid #4A4E69;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.form-container-alt-venda > form > button:hover{
+    transition: all .2s;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px #bbb;
+}
+
+.form-card-alt-venda{
+    width: 40%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px #4A4E69;
+    border-radius: 20px;
+}
+
+.form-card-alt-venda > h3{
+    text-align: center;
+    color: #4A4E69;
+}
+
+.form-card-alt-venda > p > b{
+    color: #4A4E69;
+}

@@ -58,11 +58,24 @@ app.get('/listmaiorvenda', (req, res) => {
     })
 })
 
-// Lista vendedor update
+// Lista de vendedor para update
 app.get('/listvendedor/:id', (req, res) => {
     const {id} = req.params
 
     const Query = 'SELECT * FROM vendedor WHERE id = ?'
+
+    database.query(Query, [id], (err, result) => {
+        if(err) console.log(err)
+        else res.send(result)
+    })
+
+})
+
+// Lista de venda para update
+app.get('/listvenda/:id', (req, res) => {
+    const {id} = req.params
+
+    const Query = 'SELECT vendas.id, vendas.produto, vendas.valor, DATE_FORMAT(vendas.data_venda, "%d/%m/%y") as data_venda, CONCAT(vendedor.nome, " ", vendedor.sobrenome) as nome FROM vendas JOIN vendedor ON vendedor.id = vendas.id_vendedor WHERE vendas.id = ?'
 
     database.query(Query, [id], (err, result) => {
         if(err) console.log(err)
@@ -121,7 +134,7 @@ app.post('/cadvendas', (req, res) => {
 
 /* Inicio de Rotas de Deletes */
 
-// Delete vendedor
+// Deletar vendedor
 app.delete('/deletevendedor/:id', (req, res) => {
     const {id} = req.params
 
@@ -136,11 +149,28 @@ app.delete('/deletevendedor/:id', (req, res) => {
     })
 })
 
+// Deletar Vendas
+app.delete('/deletevenda/:id', (req, res) => {
+    const {id} = req.params
+
+    const Query = 'DELETE FROM vendas WHERE id = ?'
+
+    database.query(Query, [id], (err) => {
+        if(err){
+            console.log(err)
+            return res.status(500).send('Ocorreu um erro com o servidor, Venda não deletada!')
+        }
+        return res.status(200).send('Venda deletado com sucessa!')
+    })
+})
+
 /* Fim de Rotas de Deletes */
 
 
 
 /* Inicio Rotas de Update */
+
+// Update de vendedor
 app.put('/altvendedor/:id', (req, res) => {
     const {id} = req.params
     const {nome, sobrenome, email} = req.body
@@ -156,11 +186,24 @@ app.put('/altvendedor/:id', (req, res) => {
     })
 })
 
-/* Fim rotas de Listagem (2,7,22,24.5,26)*/
+// Update de venda
+app.put('/altvenda/:id', (req, res) => {
+    const {id} = req.params
+    const {produto, valor, data_venda, id_vendedor} = req.body
+
+    const Query = 'UPDATE vendas SET produto = ?, valor = ?, data_venda = ?, id_vendedor = ? WHERE id = ?'
+
+    database.query(Query, [produto, valor, data_venda, id_vendedor, id], (err) => {
+        if(err){
+            console.log(err)
+            return res.status(500).send('Ocorreu um erro com o servidor, venda não alterada!')
+        }
+        return res.status(200).send('Venda alterada com sucesso!')
+    })
+})
+
+/* Fim rotas de Update*/
 
 app.listen(3001, () => {
     console.log("Rodando!")
 })
-
-// SELECT vendedor.nome, vendas.produto, vendas.valor FROM `vendas` JOIN vendedor ON vendedor.id = vendas.id_vendedor WHERE vendas.valor = (SELECT MAX(vendas.valor) FROM vendas);
-// SELECT vendedor.nome, COUNT(*) as qnt_vendas FROM vendas JOIN vendedor ON vendedor.id = vendas.id_vendedor GROUP BY vendas.id_vendedor;
